@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { useDispatch, useSelector } from "react-redux";
+import { getMoviesList } from "./store/actions/moviesAction";
+
+const App = () => {
+  const dispatch = useDispatch();
+  const movieState = useSelector((state) => state.moviesListReducer);
+
+  React.useEffect(() => {
+    dispatch(getMoviesList());
+  }, []);
+
+  console.log("movieState: ", movieState);
+
+  return <div>App</div>;
+};
 
 export default App;
