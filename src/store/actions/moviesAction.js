@@ -21,22 +21,21 @@ export const getMoviesList = () => async (dispatch) => {
   }
 };
 
-// export const GetPokemon = (pokemon) => async (dispatch) => {
-//   try {
-//     dispatch({
-//       type: "POKEMON_MULTIPLE_LOADING",
-//     });
+export const getEpisodesList = (id) => async (dispatch) => {
+  try {
+    dispatch({
+      type: "EPISODES_LIST_LOADING",
+    });
 
-//     const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const response = await axios.get(`${BASE_URL}/shows/${id}/episodes`);
 
-//     dispatch({
-//       type: "POKEMON_MULTIPLE_SUCCESS",
-//       payload: res.data,
-//       pokemonName: pokemon,
-//     });
-//   } catch (e) {
-//     dispatch({
-//       type: "POKEMON_MULTIPLE_FAIL",
-//     });
-//   }
-// };
+    dispatch({
+      type: "EPISODES_LIST_SUCCESS",
+      payload: response,
+    });
+  } catch (e) {
+    dispatch({
+      type: "EPISODES_LIST_FAIL",
+    });
+  }
+};

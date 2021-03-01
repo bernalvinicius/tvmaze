@@ -1,19 +1,22 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
-import { useDispatch, useSelector } from "react-redux";
 import { getMoviesList } from "./store/actions/moviesAction";
+
+import Routes from "./views/Routes";
 
 const App = () => {
   const dispatch = useDispatch();
-  const movieState = useSelector((state) => state.moviesListReducer);
 
   React.useEffect(() => {
     dispatch(getMoviesList());
-  }, []);
+  }, [dispatch]);
 
-  console.log("movieState: ", movieState);
-
-  return <div>App</div>;
+  return (
+    <>
+      <Routes />
+    </>
+  );
 };
 
 export default App;
