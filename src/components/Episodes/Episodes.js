@@ -11,6 +11,9 @@ const Episodes = () => {
   const history = useHistory();
   const episodeState = useSelector((state) => state.episodesListReducer);
 
+  /**
+   * Return to tv shows list
+   */
   const handleBack = () => {
     history.goBack();
   };

@@ -8,6 +8,9 @@ import Routes from "./views/Routes";
 const App = () => {
   const dispatch = useDispatch();
 
+  /**
+   * Does Get with the initial list of tv shows
+   */
   React.useEffect(() => {
     dispatch(getMoviesList());
   }, [dispatch]);

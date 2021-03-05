@@ -6,9 +6,16 @@ import back from "../../assets/images/back.svg";
 
 const Detail = () => {
   const history = useHistory();
+
+  /**
+   * Access the object with the episode selected by the user
+   */
   const location = useLocation();
   const episodeDetail = location.state.episode;
 
+  /**
+   * Return to episode list
+   */
   const handleBack = () => {
     history.goBack();
   };
