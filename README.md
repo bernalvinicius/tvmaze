@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# TV MAZE - agap2IT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Preview-Screens](https://raw.githubusercontent.com/bernalvinicius/tvmaze/master/src/assets/images/tvmaze.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Why?
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is part of the selection process for Front-End Developer sent by **agap2IT**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+The challenge is to make an application that consumes information about the "Powerpuff Girls" TV Show and show informations to the user.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Email-me: vini_bernal@hotmail.com
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Connect with me at [LinkedIn](https://www.linkedin.com/in/vin%C3%ADcius-bernal-19254027/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Some Observations about this App
 
-### `yarn eject`
+1 - It was built on the basis of the `create-react-app`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2 - Application state management was done using `React Redux`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Functionalities
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- HomePage
+  -  A list is rendered, containing information referring to the "Powerpuff Girls" TV show, which comes from the [TVMAZE API](https://www.tvmaze.com/api). Only the Image, Name, description and the list of episodes in the tv show are displayed to the user.
+  -  When the user click on an episode, it is redirected to the episode details page.
+ - Details Page
+   - In the episode details screen, some other data that is not on the home page is rendered, such as image and description of the episode.  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run this project in the development mode, you'll need to have a basic environment to run a React App, that can be found [here](https://reactjs.org/docs/getting-started.html).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installing
 
-### Code Splitting
+**Cloning the Repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+$ git clone https://github.com/bernalvinicius/tvmaze.git
+```
 
-### Analyzing the Bundle Size
+```
+$ cd tvmaze
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Installing dependencies**
 
-### Making a Progressive Web App
+```
+$ yarn
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+_or_
 
-### Advanced Configuration
+```
+$ npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Running
 
-### Deployment
+With all dependencies installed and the environment properly configured, you can now run the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+$ yarn start
+```
 
-### `yarn build` fails to minify
+The project will run for you at `http://localhost:3000/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+
+You can send how many PR's do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
+
+Email-me: vini_bernal@hotmail.com
+
+Connect with me at [LinkedIn](https://www.linkedin.com/in/vin%C3%ADcius-bernal-19254027/)
+
+Thank you!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/steniowagner/mindCast/blob/master/LICENSE) file for details
