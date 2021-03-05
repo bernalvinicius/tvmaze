@@ -1,32 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router";
 
 import Episode from "../Episode";
-import back from "../../assets/images/back.svg";
 
 const Episodes = () => {
-  let { name } = useParams();
-  const history = useHistory();
-  const episodeState = useSelector((state) => state.episodesListReducer);
-
   /**
-   * Return to tv shows list
+   * Access the state of the application to populate the list of episodes on the home page.
    */
-  const handleBack = () => {
-    history.goBack();
-  };
+  const episodeState = useSelector((state) => state.episodesListReducer);
 
   return (
     <div className="content-episodes">
-      <div className="content-episodes-header">
-        <button onClick={handleBack}>
-          <img src={back} alt="back" />
-        </button>
-        <h1>{name}</h1>
-      </div>
-      {episodeState.data.map((episode, i) => (
+      {episodeState?.data?.map((episode, i) => (
         <Episode key={`ep_${i}`} episode={episode} i={i} />
       ))}
     </div>

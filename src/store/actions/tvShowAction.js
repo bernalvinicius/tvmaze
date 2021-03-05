@@ -2,32 +2,32 @@ import axios from "axios";
 
 const BASE_URL = "https://api.tvmaze.com";
 
-export const getMoviesList = () => async (dispatch) => {
+export const getShowInfos = () => async (dispatch) => {
   try {
     dispatch({
-      type: "MOVIES_LIST_LOADING",
+      type: "SHOW_INFOS_LOADING",
     });
 
-    const response = await axios.get(`${BASE_URL}/shows`);
+    const response = await axios.get(`${BASE_URL}/shows/6771`);
 
     dispatch({
-      type: "MOVIES_LIST_SUCCESS",
-      payload: response,
+      type: "SHOW_INFOS_SUCCESS",
+      payload: response.data,
     });
   } catch (e) {
     dispatch({
-      type: "MOVIES_LIST_FAIL",
+      type: "SHOW_INFOS_FAIL",
     });
   }
 };
 
-export const getEpisodesList = (id) => async (dispatch) => {
+export const getEpisodesList = () => async (dispatch) => {
   try {
     dispatch({
       type: "EPISODES_LIST_LOADING",
     });
 
-    const response = await axios.get(`${BASE_URL}/shows/${id}/episodes`);
+    const response = await axios.get(`${BASE_URL}/shows/6771/episodes`);
 
     dispatch({
       type: "EPISODES_LIST_SUCCESS",

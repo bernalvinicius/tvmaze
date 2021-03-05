@@ -8,7 +8,7 @@ const Episode = ({ episode, i }) => {
       <div className="content-episode-title">
         <Link
           to={{
-            pathname: "/details",
+            pathname: `/details/${episode.id}`,
             state: { episode },
           }}
         >

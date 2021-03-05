@@ -4,21 +4,21 @@ const initialState = {
   errorMsg: "",
 };
 
-const moviesListReducer = (state = initialState, action) => {
+const showListReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "MOVIES_LIST_LOADING":
+    case "SHOW_INFOS_LOADING":
       return {
         ...state,
         loading: true,
         errorMsg: "",
       };
-    case "MOVIES_LIST_FAIL":
+    case "SHOW_INFOS_FAIL":
       return {
         ...state,
         loading: false,
         errorMsg: "unable to get movies",
       };
-    case "MOVIES_LIST_SUCCESS":
+    case "SHOW_INFOS_SUCCESS":
       return {
         ...state,
         loading: false,
@@ -30,4 +30,4 @@ const moviesListReducer = (state = initialState, action) => {
   }
 };
 
-export default moviesListReducer;
+export default showListReducer;

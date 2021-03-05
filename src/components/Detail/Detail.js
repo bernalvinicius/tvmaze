@@ -14,7 +14,7 @@ const Detail = () => {
   const episodeDetail = location.state.episode;
 
   /**
-   * Return to episode list
+   * Return to home page
    */
   const handleBack = () => {
     history.goBack();
