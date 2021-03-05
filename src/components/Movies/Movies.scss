@@ -1,9 +1,13 @@
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   max-width: 868px;
   width: 100%;
+
+  @media (min-width: 576px) {
+    justify-content: space-between;
+  }
 }

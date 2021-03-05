@@ -31,7 +31,7 @@ export const getEpisodesList = (id) => async (dispatch) => {
 
     dispatch({
       type: "EPISODES_LIST_SUCCESS",
-      payload: response,
+      payload: response.data,
     });
   } catch (e) {
     dispatch({

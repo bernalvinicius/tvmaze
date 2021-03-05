@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
-
-import Episodes from "../Episodes";
+import { Link } from "react-router-dom";
 
 const Movie = ({ movie }) => {
   return (
@@ -10,16 +8,14 @@ const Movie = ({ movie }) => {
       <div className="card-image">
         <img src={movie.image.medium} alt="" />
       </div>
-      {/* <Link to={`shows/${movie.id}`} className="card-link" /> */}
+      <Link to={`shows/${movie.name}/${movie.id}`} className="card-link" />
       <div className="card-content">
         <div>
           <h3>{movie.name}</h3>
         </div>
         <div className="content-title">
-          {/* {movie.summary.replace(/(<([^>]+)>)/gi, "")} */}
           <span>{movie.rating.average}</span>
         </div>
-        <Episodes id={movie.id} />
       </div>
     </div>
   );
